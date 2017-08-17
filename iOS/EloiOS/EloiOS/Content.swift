@@ -12,7 +12,7 @@ typealias JSONDictionary = [String: Any]
 
 struct Content {
     let header: Header
-    var about: [About]
+    var about: About
     let area: Area
     let footer: Footer
     
@@ -21,12 +21,13 @@ struct Content {
 extension Content {
     init?(dictionary: JSONDictionary) {
         self.header = Header.init(dictionary: dictionary["header"] as! JSONDictionary) ?? Header.init(imageBackground: "", textImage: "")
-        self.about = []
-        if let dictAbout = dictionary["about"] as? [JSONDictionary] {
-            for each in dictAbout {
-                self.about.append(About.init(dict: each))
-            }
-        }
+//        self.about = []
+//        if let dictAbout = dictionary["about"] as? [JSONDictionary] {
+//            for each in dictAbout {
+//                self.about.append(About.init(dict: each))
+//            }
+//        }
+        self.about = About.init(dict: dictionary["about"] as! JSONDictionary)
         self.area = Area.init(dict: dictionary["area"] as! JSONDictionary)
         self.footer = Footer.init(dict: dictionary["footer"] as! JSONDictionary)
     }
@@ -65,18 +66,37 @@ extension Header {
 
 struct About {
     let title: String
-    let img: String?
-    let description: String
+    let subtitle: String
+    var elements: [ElementsAbout]
 }
 
 extension About {
     init(dict: JSONDictionary) {
         self.title = dict["title"] as! String
-        self.img = dict["img"] as? String ?? ""
-        self.description = dict["description"] as! String
-        
+        self.subtitle = dict["subtitle"] as! String
+        self.elements = []
+        if let dictAbout = dict["elements"] as?[JSONDictionary] {
+            for each in dictAbout {
+                self.elements.append(ElementsAbout.init(dict: each))
+            }
+        }
     }
 }
+
+struct ElementsAbout {
+    let title: String
+    let img: String
+    let description: String
+}
+
+extension ElementsAbout {
+    init(dict: JSONDictionary) {
+        self.title = dict["title"] as! String
+        self.img = dict["img"] as! String
+        self.description = dict["description"] as! String
+    }
+}
+
 
 struct Area {
     let title: String

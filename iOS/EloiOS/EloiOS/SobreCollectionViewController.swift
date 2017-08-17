@@ -13,8 +13,8 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class SobreCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ViewControllerDelegate {
-    func reloadSobreView(about: [About]) {
+class SobreCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, ViewControllerDelegate {
+    func reloadSobreView(about: About) {
         self.sobre = about
         DispatchQueue.main.async {
             self.collectionView.reloadData()
@@ -25,46 +25,27 @@ class SobreCollectionViewController: UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var collectionView: UICollectionView!
         
     
-    var sobre: [About] = []
+    var sobre: About?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-       // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
-        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
-        
-        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if let vc = self.parent as? ViewController {
             vc.delegate = self
         }
-        
-        
     }
     
     
     
     
-    func reloadView(about: [About]) {
-        self.sobre = about
-        
-        
-    }
     
     
     
@@ -108,20 +89,54 @@ class SobreCollectionViewController: UIViewController, UICollectionViewDelegate,
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return self.sobre.count
+//        return (self.sobre?.elements.count)!
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if indexPath.row == 1 {
+            return CGSize.init(width: 349, height: 10)
+//        } else {
+        
+//            let size: CGSize = self.sobre?.elements[indexPath.row].description.size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14.0)])
+//            
+//            print(size.width + 45.0)
+//            return CGSize(width: 349 , height: size.width + 45.0)
+            
+//            return CGSize.init(width: 349, height: 100)
+//        }
     }
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SobreCollectionViewCell
     
-        let about = self.sobre[indexPath.row]
-        
-        cell.title.text = about.title
-        
+//        let about = self.sobre?.elements[indexPath.row]
+//        
+//        cell.title.text = about.title
+//        
+//        
+//        
+//        
+//        cell.descriptionSobre.attributedText = about.description.html2AttributedString
+//        cell.image.image = UIImage.init(named: about.img ?? "")
+//        
         // Configure the cell
     
         return cell
     }
+    
+//    static func htmlToText(encodedString:String) -> String?
+//    {
+//        let encodedData = encodedString.data(using: String.Encoding.utf8)!
+//        do
+//        {
+//            return try NSAttributedString(data: encodedData, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,NSCharacterEncodingDocumentAttribute:String.Encoding.utf8], documentAttributes: nil).string
+//        } catch let error as NSError {
+//            print(error.localizedDescription)
+//            return nil
+//        }
+//    }
 
     // MARK: UICollectionViewDelegate
 
@@ -155,3 +170,5 @@ class SobreCollectionViewController: UIViewController, UICollectionViewDelegate,
     */
 
 }
+
+

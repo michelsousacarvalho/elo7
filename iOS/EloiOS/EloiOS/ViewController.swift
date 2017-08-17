@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol ViewControllerDelegate {
-    func reloadSobreView(about: [About])
+    func reloadSobreView(about: About)
 }
 
 class ViewController: UIViewController {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         Request().load(resource: Content.all) { result in
             
-            if self.childViewControllers[1] is SobreCollectionViewController {
+            if self.childViewControllers[1] is SobreViewController {
                 
                 guard let method = self.delegate?.reloadSobreView(about: (result?.about)!) else {
                     return
