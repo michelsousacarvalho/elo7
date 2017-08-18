@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C1FE5361F468B4C00D4CE60 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */; };
 		6C1FE5391F46947900D4CE60 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1FE5381F46947900D4CE60 /* ViewControllerDelegate.swift */; };
+		6C1FE53C1F469E5800D4CE60 /* estrutura.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C1FE53B1F469E5800D4CE60 /* estrutura.json */; };
 		6C7C49A21F31709500A6D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C49A11F31709500A6D92A /* AppDelegate.swift */; };
 		6C7C49A41F31709500A6D92A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C49A31F31709500A6D92A /* ViewController.swift */; };
 		6C7C49A71F31709500A6D92A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C49A51F31709500A6D92A /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		6C1FE5381F46947900D4CE60 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
+		6C1FE53B1F469E5800D4CE60 /* estrutura.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = estrutura.json; sourceTree = "<group>"; };
 		6C7C499E1F31709500A6D92A /* EloiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EloiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7C49A11F31709500A6D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7C49A31F31709500A6D92A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				6C99CF0B1F45322A00BF0E16 /* LibFont */,
 				6C99CF011F41577F00BF0E16 /* Constant.swift */,
+				6C1FE53B1F469E5800D4CE60 /* estrutura.json */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C7C49AC1F31709500A6D92A /* LaunchScreen.storyboard in Resources */,
+				6C1FE53C1F469E5800D4CE60 /* estrutura.json in Resources */,
 				6C7C49A91F31709500A6D92A /* Assets.xcassets in Resources */,
 				6C7C49A71F31709500A6D92A /* Main.storyboard in Resources */,
 			);

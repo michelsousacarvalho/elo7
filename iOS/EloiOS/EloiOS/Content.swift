@@ -21,12 +21,6 @@ struct Content {
 extension Content {
     init?(dictionary: JSONDictionary) {
         self.header = Header.init(dictionary: dictionary["header"] as! JSONDictionary) ?? Header.init(imageBackground: "", textImage: "")
-//        self.about = []
-//        if let dictAbout = dictionary["about"] as? [JSONDictionary] {
-//            for each in dictAbout {
-//                self.about.append(About.init(dict: each))
-//            }
-//        }
         self.about = About.init(dict: dictionary["about"] as! JSONDictionary)
         self.area = Area.init(dict: dictionary["area"] as! JSONDictionary)
         self.footer = Footer.init(dict: dictionary["footer"] as! JSONDictionary)
@@ -35,12 +29,6 @@ extension Content {
     
     
     static let all = Resource<Content>(url: Constant.urlRequest, parseJSON: { json in
-//        if let dict = json as? JSONDictionary {
-//            return Content.init(dictionary: dict)
-//        } else {
-//                print("Passou")
-//                return nil
-//        }
         guard let dict = json as? JSONDictionary else { return nil }
         return Content.init(dictionary: dict)
     })

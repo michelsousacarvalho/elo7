@@ -1,0 +1,41 @@
+{
+    "header" :{
+        "imageBackground": "heroshot",
+        "textImage": "titulo"
+    },
+    "about": {
+        "title":"NOSSA CULTURA",
+        "subtitle": "Somos orientados pela satisfação e fidelização de nossos clientes",
+        "elements":[
+                    {"title":"CRIATIVIDADE", "img":"criatividade", "description": "Estimulamos a <strong>intervenção humana</strong> como algo insubstituível. Nosso ambiente é inspirador"},
+                    {"title":"COLABORAÇÃO", "img":"colaboracao", "description": "Valorizamos o trabalho em equipe e as <strong>habilidades individuais</strong>. Incentivamos o <strong>empreendedorismo</strong> e formamos um time fora de série"},
+                    {"title":"TECNOLOGIA E INOVAÇÃO","img":"tec-ino", "description": "Utilizamos a <strong>tecnologia</strong> para melhorar continuamente nosso negócio. Transformamos e <strong>conectamos</strong> pessoas"}
+                    ]
+    },
+    "area":{
+        "title": "Conheça nossa área",
+        "elements": [
+                     {"text":"ENGENHARIA", "img": "ic-engenharia"},
+                     {"text":"ATENDIMENTO", "img": "ic-atendimento"},
+                     {"text":"COMUNICAÇÃO E MARKETING", "img": "ic-comunicacao-mkt"},
+                     {"text":"DESENVOLVIMENTO DE VENDEDORES", "img": "ic-desenvolvimento-vendedores"},
+                     {"text":"DESIGN", "img": "ic-design"},
+                     {"text":"PRODUTO", "img": "ic-produto"},
+                     {"text":"TRUST & SAFETY", "img": "ic-trustnsafety"},
+                     {"text":"ADMINISTRATIVO/FINANCEIRO", "img": "ic-adm-financeiro"}
+                     ]
+    },
+    "footer": {
+        "title":"CONECTE-SE COM A GENTE",
+        "elements": [
+                     {"img": "facebook"},
+                     {"img": "instagram"},
+                     {"img": "googleplus"},
+                     {"img": "pinterest-light"},
+                     {"img": "twitter"},
+                     {"img": "linkedin"},
+                     {"img": "BLOG"}
+                     ]
+        
+    }    
+}

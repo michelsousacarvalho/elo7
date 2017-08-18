@@ -68,11 +68,6 @@ class ViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = rightButtonItem
         
-        
-        
-//       let urlRequest =  URLRequest.init(url: URL(string:"https://michelsousacarvalho.github.io")!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
-//        self.webView.loadRequest(urlRequest)
-        
     }
 
     override func didReceiveMemoryWarning() {
