@@ -11,12 +11,24 @@ import UIKit
 
 protocol ViewControllerDelegate {
     func reloadSobreView(about: About)
+    func reloadAreaView(area:Area)
 }
+
+extension ViewControllerDelegate {
+    func reloadSobreView(about: About) {
+        
+    }
+    func reloadAreaView(area:Area) {
+        
+    }
+}
+
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
-    var delegate: ViewControllerDelegate?
+    var delegateSobre: ViewControllerDelegate?
+    var delegateArea: ViewControllerDelegate?
     
     
     override func viewDidLoad() {
@@ -25,13 +37,17 @@ class ViewController: UIViewController {
         Request().load(resource: Content.all) { result in
             
             if self.childViewControllers[1] is SobreViewController {
-                
-                guard let method = self.delegate?.reloadSobreView(about: (result?.about)!) else {
+                guard let method = self.delegateSobre?.reloadSobreView(about: (result?.about)!) else {
                     return
                 }
                 method
-                
-                
+            }
+            
+            if self.childViewControllers[2] is AreaViewController {
+                guard let method = self.delegateArea?.reloadAreaView(area: (result?.area)!) else {
+                    return
+                }
+                method
             }
             
         }

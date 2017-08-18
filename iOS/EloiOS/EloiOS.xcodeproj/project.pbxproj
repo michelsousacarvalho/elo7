@@ -25,6 +25,7 @@
 		6C99CF131F45324100BF0E16 /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CF0E1F45324100BF0E16 /* NSScanner+Swift.swift */; };
 		6C99CF141F45324100BF0E16 /* String+Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CF0F1F45324100BF0E16 /* String+Detection.swift */; };
 		6C99CF151F45324100BF0E16 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CF101F45324100BF0E16 /* Style.swift */; };
+		6C99CF181F454A7200BF0E16 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CF171F454A7200BF0E16 /* AreaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		6C99CF0E1F45324100BF0E16 /* NSScanner+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSScanner+Swift.swift"; sourceTree = "<group>"; };
 		6C99CF0F1F45324100BF0E16 /* String+Detection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Detection.swift"; sourceTree = "<group>"; };
 		6C99CF101F45324100BF0E16 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		6C99CF171F454A7200BF0E16 /* AreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,19 +82,15 @@
 		6C7C49A01F31709500A6D92A /* EloiOS */ = {
 			isa = PBXGroup;
 			children = (
+				6C99CF161F454A1100BF0E16 /* Controller */,
 				6C99CF0B1F45322A00BF0E16 /* LibFont */,
 				6C99CEFA1F41277D00BF0E16 /* Request */,
 				6C7C49A11F31709500A6D92A /* AppDelegate.swift */,
-				6C7C49A31F31709500A6D92A /* ViewController.swift */,
 				6C7C49A51F31709500A6D92A /* Main.storyboard */,
-				6C99CEF81F411F1100BF0E16 /* SobreCollectionViewCell.swift */,
-				6C99CEF61F411DE100BF0E16 /* SobreCollectionViewController.swift */,
 				6C7C49A81F31709500A6D92A /* Assets.xcassets */,
 				6C7C49AA1F31709500A6D92A /* LaunchScreen.storyboard */,
 				6C7C49AD1F31709500A6D92A /* Info.plist */,
-				6C99CEF41F411C5000BF0E16 /* HeaderViewController.swift */,
 				6C99CF011F41577F00BF0E16 /* Constant.swift */,
-				6C99CF091F451AE600BF0E16 /* SobreViewController.swift */,
 			);
 			path = EloiOS;
 			sourceTree = "<group>";
@@ -117,6 +115,19 @@
 				6C99CF101F45324100BF0E16 /* Style.swift */,
 			);
 			name = LibFont;
+			sourceTree = "<group>";
+		};
+		6C99CF161F454A1100BF0E16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C7C49A31F31709500A6D92A /* ViewController.swift */,
+				6C99CEF81F411F1100BF0E16 /* SobreCollectionViewCell.swift */,
+				6C99CEF61F411DE100BF0E16 /* SobreCollectionViewController.swift */,
+				6C99CEF41F411C5000BF0E16 /* HeaderViewController.swift */,
+				6C99CF091F451AE600BF0E16 /* SobreViewController.swift */,
+				6C99CF171F454A7200BF0E16 /* AreaViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				6C99CF001F414BA400BF0E16 /* Content.swift in Sources */,
 				6C7C49A41F31709500A6D92A /* ViewController.swift in Sources */,
 				6C7C49A21F31709500A6D92A /* AppDelegate.swift in Sources */,
+				6C99CF181F454A7200BF0E16 /* AreaViewController.swift in Sources */,
 				6C99CF121F45324100BF0E16 /* NSAttributedString+Utils.swift in Sources */,
 				6C99CEF51F411C5000BF0E16 /* HeaderViewController.swift in Sources */,
 				6C99CF141F45324100BF0E16 /* String+Detection.swift in Sources */,

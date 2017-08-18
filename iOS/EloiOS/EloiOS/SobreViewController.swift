@@ -12,6 +12,7 @@ class SobreViewController: UIViewController, ViewControllerDelegate {
 
 
 
+
     @IBOutlet weak var title1: UILabel!
     @IBOutlet weak var subtitle1: UILabel!
     @IBOutlet weak var img1: UIImageView!
@@ -30,8 +31,9 @@ class SobreViewController: UIViewController, ViewControllerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let vc = self.parent as? ViewController {
-            vc.delegate = self
+            vc.delegateSobre = self
         }
     }
     

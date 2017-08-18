@@ -10,7 +10,7 @@ import Foundation
 
 
 struct Constant {
-    static let urlRequest = NSURL(string: "http://www.mocky.io/v2/5994f1c211000082087231c1")!
+    static let urlRequest = NSURL(string: "http://www.mocky.io/v2/59963158110000350bcc4400")!
     static let segueSobre = "segueSobre"
     
 }

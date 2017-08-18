@@ -13,7 +13,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class SobreCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, ViewControllerDelegate {
+class SobreCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func reloadSobreView(about: About) {
         self.sobre = about
         DispatchQueue.main.async {
@@ -39,7 +39,7 @@ class SobreCollectionViewController: UIViewController, UICollectionViewDelegate,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let vc = self.parent as? ViewController {
-            vc.delegate = self
+//            vc.delegate = self as? ViewControllerDelegate
         }
     }
     
