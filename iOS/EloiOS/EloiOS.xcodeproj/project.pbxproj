@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6C1FE5361F468B4C00D4CE60 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */; };
+		6C1FE5391F46947900D4CE60 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1FE5381F46947900D4CE60 /* ViewControllerDelegate.swift */; };
 		6C7C49A21F31709500A6D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C49A11F31709500A6D92A /* AppDelegate.swift */; };
 		6C7C49A41F31709500A6D92A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C49A31F31709500A6D92A /* ViewController.swift */; };
 		6C7C49A71F31709500A6D92A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C49A51F31709500A6D92A /* Main.storyboard */; };
 		6C7C49A91F31709500A6D92A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C49A81F31709500A6D92A /* Assets.xcassets */; };
 		6C7C49AC1F31709500A6D92A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C49AA1F31709500A6D92A /* LaunchScreen.storyboard */; };
 		6C99CEF51F411C5000BF0E16 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CEF41F411C5000BF0E16 /* HeaderViewController.swift */; };
-		6C99CEF71F411DE100BF0E16 /* SobreCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CEF61F411DE100BF0E16 /* SobreCollectionViewController.swift */; };
-		6C99CEF91F411F1100BF0E16 /* SobreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CEF81F411F1100BF0E16 /* SobreCollectionViewCell.swift */; };
 		6C99CEFC1F41497400BF0E16 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CEFB1F41497400BF0E16 /* Request.swift */; };
 		6C99CEFE1F414AB000BF0E16 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CEFD1F414AB000BF0E16 /* Resource.swift */; };
 		6C99CF001F414BA400BF0E16 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99CEFF1F414BA400BF0E16 /* Content.swift */; };
@@ -31,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		6C1FE5381F46947900D4CE60 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 		6C7C499E1F31709500A6D92A /* EloiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EloiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7C49A11F31709500A6D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7C49A31F31709500A6D92A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,8 +39,6 @@
 		6C7C49AB1F31709500A6D92A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7C49AD1F31709500A6D92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C99CEF41F411C5000BF0E16 /* HeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
-		6C99CEF61F411DE100BF0E16 /* SobreCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreCollectionViewController.swift; sourceTree = "<group>"; };
-		6C99CEF81F411F1100BF0E16 /* SobreCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C99CEFB1F41497400BF0E16 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		6C99CEFD1F414AB000BF0E16 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		6C99CEFF1F414BA400BF0E16 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
@@ -65,6 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C1FE5371F46946500D4CE60 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6C1FE5381F46947900D4CE60 /* ViewControllerDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		6C1FE53A1F46950100D4CE60 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6C99CF0B1F45322A00BF0E16 /* LibFont */,
+				6C99CF011F41577F00BF0E16 /* Constant.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		6C7C49951F31709500A6D92A = {
 			isa = PBXGroup;
 			children = (
@@ -84,15 +99,15 @@
 		6C7C49A01F31709500A6D92A /* EloiOS */ = {
 			isa = PBXGroup;
 			children = (
+				6C1FE53A1F46950100D4CE60 /* Utils */,
+				6C1FE5371F46946500D4CE60 /* Protocols */,
 				6C99CF161F454A1100BF0E16 /* Controller */,
-				6C99CF0B1F45322A00BF0E16 /* LibFont */,
 				6C99CEFA1F41277D00BF0E16 /* Request */,
 				6C7C49A11F31709500A6D92A /* AppDelegate.swift */,
 				6C7C49A51F31709500A6D92A /* Main.storyboard */,
 				6C7C49A81F31709500A6D92A /* Assets.xcassets */,
 				6C7C49AA1F31709500A6D92A /* LaunchScreen.storyboard */,
 				6C7C49AD1F31709500A6D92A /* Info.plist */,
-				6C99CF011F41577F00BF0E16 /* Constant.swift */,
 			);
 			path = EloiOS;
 			sourceTree = "<group>";
@@ -123,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				6C7C49A31F31709500A6D92A /* ViewController.swift */,
-				6C99CEF81F411F1100BF0E16 /* SobreCollectionViewCell.swift */,
-				6C99CEF61F411DE100BF0E16 /* SobreCollectionViewController.swift */,
 				6C99CEF41F411C5000BF0E16 /* HeaderViewController.swift */,
 				6C99CF091F451AE600BF0E16 /* SobreViewController.swift */,
 				6C99CF171F454A7200BF0E16 /* AreaViewController.swift */,
@@ -205,8 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C99CEF71F411DE100BF0E16 /* SobreCollectionViewController.swift in Sources */,
 				6C99CEFC1F41497400BF0E16 /* Request.swift in Sources */,
+				6C1FE5391F46947900D4CE60 /* ViewControllerDelegate.swift in Sources */,
 				6C99CF131F45324100BF0E16 /* NSScanner+Swift.swift in Sources */,
 				6C1FE5361F468B4C00D4CE60 /* SocialViewController.swift in Sources */,
 				6C99CF021F41577F00BF0E16 /* Constant.swift in Sources */,
@@ -221,7 +234,6 @@
 				6C99CF121F45324100BF0E16 /* NSAttributedString+Utils.swift in Sources */,
 				6C99CEF51F411C5000BF0E16 /* HeaderViewController.swift in Sources */,
 				6C99CF141F45324100BF0E16 /* String+Detection.swift in Sources */,
-				6C99CEF91F411F1100BF0E16 /* SobreCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

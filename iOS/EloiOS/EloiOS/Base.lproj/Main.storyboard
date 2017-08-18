@@ -118,10 +118,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroshot" translatesAutoresizingMaskIntoConstraints="NO" id="Swn-VP-dba">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Swn-VP-dba">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="Wqt-PI-ggR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wqt-PI-ggR">
                                 <rect key="frame" x="58" y="33" width="259" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="wLe-ph-8TW"/>
@@ -139,6 +139,10 @@
                             <constraint firstItem="Swn-VP-dba" firstAttribute="leading" secondItem="bOp-AJ-v52" secondAttribute="leading" id="onV-bC-afU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImg" destination="Swn-VP-dba" id="Bdg-TC-MsQ"/>
+                        <outlet property="textImg" destination="Wqt-PI-ggR" id="Lyv-hm-OeJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YuE-M5-d5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -817,7 +821,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroshot" width="640" height="500"/>
         <image name="imageView:Zx0-8a-CGH:image" width="225" height="225">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
@@ -4265,6 +4268,5 @@ YwADJWsAAyV4AAMlfQADJX8AAyWBAAMlhgADJY4AAyWRAAMllgADJZ4AAyWhAAMlswADJbYAAyW7AAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAADJb0
 </mutableData>
         </image>
-        <image name="titulo" width="341" height="106"/>
     </resources>
 </document>

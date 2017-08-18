@@ -9,29 +9,12 @@
 import UIKit
 
 
-protocol ViewControllerDelegate {
-    func reloadSobreView(about: About)
-    func reloadAreaView(area:Area)
-    func reloadSocialView(social: Footer)
-}
-
-extension ViewControllerDelegate {
-    func reloadSobreView(about: About) {
-        
-    }
-    func reloadAreaView(area:Area) {
-        
-    }
-    
-    func reloadSocialView(social: Footer) {
-        
-    }
-}
 
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
+    var delegateHeader: ViewControllerDelegate? 
     var delegateSobre: ViewControllerDelegate?
     var delegateArea: ViewControllerDelegate?
     var delegateFooter: ViewControllerDelegate?
@@ -41,6 +24,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         Request().load(resource: Content.all) { result in
+            
+            if self.childViewControllers[0] is HeaderViewController {
+                guard let method = self.delegateHeader?.reloadHeader(header: (result?.header)!) else {
+                    return
+                }
+                method
+            }
             
             if self.childViewControllers[1] is SobreViewController {
                 guard let method = self.delegateSobre?.reloadSobreView(about: (result?.about)!) else {
@@ -65,6 +55,18 @@ class ViewController: UIViewController {
             
         }
         
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage.init(named: "logo"), for: UIControlState.normal)
+        button.frame = CGRect.init(x: 0, y: 0, width: 50, height: 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+        
+        let rightButtonItem = UIBarButtonItem.init()
+        rightButtonItem.title = "Eventos"
+        rightButtonItem.tintColor = UIColor.init(colorLiteralRed: 45/255, green: 140/255, blue: 138/255, alpha: 1.0)
+        
+        
+        self.navigationItem.rightBarButtonItem = rightButtonItem
         
         
         
@@ -78,18 +80,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == Constant.segueSobre {
-//            let sobreVC = segue.destination as! SobreCollectionViewController
-//            if let content = sender as? Content {
-//                sobreVC.sobre = content.about
-//            }
-            
-        }
-        
-        
-    }
+
     
     
 

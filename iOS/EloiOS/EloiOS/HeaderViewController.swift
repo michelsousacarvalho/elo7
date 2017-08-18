@@ -8,18 +8,32 @@
 
 import UIKit
 
-class HeaderViewController: UIViewController {
+class HeaderViewController: UIViewController, ViewControllerDelegate {
+    @IBOutlet weak var backgroundImg: UIImageView!
+    @IBOutlet weak var textImg: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("teste")
-        
-        
+   
         
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let vc = self.parent as? ViewController {
+            vc.delegateHeader = self
+        }
+    }
+    
+    func reloadHeader(header: Header) {
+        DispatchQueue.main.async {
+            self.backgroundImg.image = UIImage.init(named: header.imageBackground)
+            self.textImg.image = UIImage.init(named: header.textImage)
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
