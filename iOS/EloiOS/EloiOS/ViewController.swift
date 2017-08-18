@@ -12,6 +12,7 @@ import UIKit
 protocol ViewControllerDelegate {
     func reloadSobreView(about: About)
     func reloadAreaView(area:Area)
+    func reloadSocialView(social: Footer)
 }
 
 extension ViewControllerDelegate {
@@ -19,6 +20,10 @@ extension ViewControllerDelegate {
         
     }
     func reloadAreaView(area:Area) {
+        
+    }
+    
+    func reloadSocialView(social: Footer) {
         
     }
 }
@@ -29,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     var delegateSobre: ViewControllerDelegate?
     var delegateArea: ViewControllerDelegate?
+    var delegateFooter: ViewControllerDelegate?
     
     
     override func viewDidLoad() {
@@ -45,6 +51,13 @@ class ViewController: UIViewController {
             
             if self.childViewControllers[2] is AreaViewController {
                 guard let method = self.delegateArea?.reloadAreaView(area: (result?.area)!) else {
+                    return
+                }
+                method
+            }
+            
+            if self.childViewControllers[3] is SocialViewController {
+                guard let method = self.delegateFooter?.reloadSocialView(social: (result?.footer)!) else {
                     return
                 }
                 method

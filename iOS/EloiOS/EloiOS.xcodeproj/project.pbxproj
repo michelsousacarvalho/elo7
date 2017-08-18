@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C1FE5361F468B4C00D4CE60 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */; };
 		6C7C49A21F31709500A6D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C49A11F31709500A6D92A /* AppDelegate.swift */; };
 		6C7C49A41F31709500A6D92A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C49A31F31709500A6D92A /* ViewController.swift */; };
 		6C7C49A71F31709500A6D92A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C49A51F31709500A6D92A /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		6C7C499E1F31709500A6D92A /* EloiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EloiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7C49A11F31709500A6D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7C49A31F31709500A6D92A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				6C99CEF41F411C5000BF0E16 /* HeaderViewController.swift */,
 				6C99CF091F451AE600BF0E16 /* SobreViewController.swift */,
 				6C99CF171F454A7200BF0E16 /* AreaViewController.swift */,
+				6C1FE5351F468B4C00D4CE60 /* SocialViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				6C99CEF71F411DE100BF0E16 /* SobreCollectionViewController.swift in Sources */,
 				6C99CEFC1F41497400BF0E16 /* Request.swift in Sources */,
 				6C99CF131F45324100BF0E16 /* NSScanner+Swift.swift in Sources */,
+				6C1FE5361F468B4C00D4CE60 /* SocialViewController.swift in Sources */,
 				6C99CF021F41577F00BF0E16 /* Constant.swift in Sources */,
 				6C99CF151F45324100BF0E16 /* Style.swift in Sources */,
 				6C99CF111F45324100BF0E16 /* Atributika.swift in Sources */,
